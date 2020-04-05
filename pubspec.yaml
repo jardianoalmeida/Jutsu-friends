@@ -29,6 +29,8 @@ dependencies:
   avatar_glow: ^1.1.0
   agora_rtc_engine: 1.0.5
   permission_handler: ^3.0.0
+  flutter_neumorphic: ^1.0.4
+
 
 dev_dependencies:
   flutter_test:

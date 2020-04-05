@@ -15,7 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: IndexPage(), //MSplashScreen(),
+      home: MSplashScreen(),
+        routes: {
+          '/index': (context) => IndexPage(),
+        },
     );
   }
 }

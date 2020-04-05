@@ -89,11 +89,10 @@ class _MSplashScreenState extends State<MSplashScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    avatar(), //Julio
-                    avatar(), //Marcos
-                    avatar(), //Jardiano
-                    //avatar(), //Moises
-                   // avatar(), //Dion
+                    avatar(function: ()=> Navigator.pushNamed(context, "/index")), //Julio
+                    avatar(function: ()=> Navigator.pushNamed(context, "/index")), //Julio
+                    avatar(function: ()=> Navigator.pushNamed(context, "/index")), //Julio
+                    avatar(function: ()=> Navigator.pushNamed(context, "/index")), //Julio
                   ],
                 ),
                 AvatarGlow(
@@ -143,14 +142,13 @@ class _MSplashScreenState extends State<MSplashScreen> {
     );
   }
 }
-avatar(){
+avatar({Function function}){
   return AvatarGlow(
     endRadius: 50.0,
     glowColor: Colors.white,
     showTwoGlows: true,
     child: InkWell(
-      onTap: () {
-      },// assetsAudioPlayer.play(),
+      onTap: function,// assetsAudioPlayer.play(),
       child: Material(
         elevation: 8.0,
         shape: CircleBorder(),
