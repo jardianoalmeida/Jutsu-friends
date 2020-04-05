@@ -48,7 +48,7 @@ class _MSplashScreenState extends State<MSplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setEnabledSystemUIOverlays([]);
+   // SystemChrome.setEnabledSystemUIOverlays([]);
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
       systemNavigationBarColor: Color(0xff2c2c2c),
       statusBarColor: Colors.transparent,
@@ -69,12 +69,14 @@ class _MSplashScreenState extends State<MSplashScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          Center(child: Text("Onde está seu programador?", style: TextStyle(fontSize: 14.0, color: Colors.blue), textAlign: TextAlign.center,)),
           Container(
             height: 400.0,
             child: FlareActor("file/intro.flr",
                 alignment: Alignment.center,
                 fit: BoxFit.contain,
-                animation: "coding"),
+                animation: "coding",
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 10.0, right: 10.0),
@@ -170,26 +172,6 @@ class _MSplashScreenState extends State<MSplashScreen> {
                     animation: "record",
                   ),
                 ),
-/*                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    IconButton(
-                      icon: Icon(Icons.clear),
-                      onPressed: () {
-                        Volume.volDown(); // Consecutively decrease the volume by 1 unit.
-                        updateVolumes();
-                      },
-                    ),
-                    IconButton(
-                      icon: Text("+", style: TextStyle(color: Colors.white70, fontSize: 40),),
-                      onPressed: () {
-                        Volume.volUp(); // Consecutively decrease the volume by 1 unit.
-                        updateVolumes();
-                      },
-                    ),
-                  ],
-                ),*/
                 Slider(
                   activeColor: Colors.indigoAccent,
                   min: 0.0,
@@ -198,7 +180,7 @@ class _MSplashScreenState extends State<MSplashScreen> {
                     setState(() {
                       _sliderValue = newRating;
                     });
-                    await setVol(newRating.toInt());
+                   // await setVol(newRating.toInt());
                     await updateVolumes();
                   },
                   value: _sliderValue,
