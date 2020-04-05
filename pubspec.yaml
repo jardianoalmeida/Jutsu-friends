@@ -27,6 +27,8 @@ dependencies:
   flare_splash_screen: ^3.0.1
   assets_audio_player: ^1.2.3
   avatar_glow: ^1.1.0
+  agora_rtc_engine: 1.0.5
+  permission_handler: ^3.0.0
 
 dev_dependencies:
   flutter_test:
