@@ -85,6 +85,17 @@ class _MSplashScreenState extends State<MSplashScreen> {
             alignment: Alignment.bottomCenter,
             child: Column(
               children: <Widget>[
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    avatar(), //Julio
+                    avatar(), //Marcos
+                    avatar(), //Jardiano
+                    //avatar(), //Moises
+                   // avatar(), //Dion
+                  ],
+                ),
                 AvatarGlow(
                   endRadius: 50.0,
                   glowColor: Colors.white,
@@ -131,4 +142,30 @@ class _MSplashScreenState extends State<MSplashScreen> {
       ),
     );
   }
+}
+avatar(){
+  return AvatarGlow(
+    endRadius: 50.0,
+    glowColor: Colors.white,
+    showTwoGlows: true,
+    child: InkWell(
+      onTap: () {
+      },// assetsAudioPlayer.play(),
+      child: Material(
+        elevation: 8.0,
+        shape: CircleBorder(),
+        child: Container(
+          width: 40.0,
+          height: 40.0,
+          decoration: new BoxDecoration(
+            shape: BoxShape.circle,
+            image: new DecorationImage(
+              image: AssetImage("file/photo.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
 }
