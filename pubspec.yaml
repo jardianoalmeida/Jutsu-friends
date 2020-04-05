@@ -30,6 +30,8 @@ dependencies:
   agora_rtc_engine: 1.0.5
   permission_handler: ^3.0.0
   flutter_neumorphic: ^1.0.4
+  volume: ^0.1.0
+  google_maps_flutter: ^0.5.25+3
 
 
 dev_dependencies:
@@ -56,6 +58,10 @@ flutter:
     - file/audio.mp3
     - file/audio.flr
     - file/photo.jpg
+    - file/moises.jpg
+    - file/julio.jpg
+    - file/henrique.jpg
+    - file/marcos.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
